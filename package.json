@@ -2,14 +2,18 @@
   "name": "electron-tutorial",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "scripts": {
-    "start": "electron .",
+    "start": "tsc && copyfiles -f src/index.html build && electron build/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^28.2.1"
+  },
+  "dependencies": {
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.0.3",
+    "typescript": "^5.3.3"
   }
 }
